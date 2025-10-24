@@ -20,13 +20,14 @@ def test_create_order_and_get_by_track():
     # Шаг 4: Проверить, что код ответа равен 200
     assert track_response.status_code == 200, f"Ошибка получения заказа: {track_response.status_code}"
     
-    # Дополнительные проверки (опционально)
+    # Дополнительные проверки
     order_data = track_response.json()
     assert 'order' in order_data, "В ответе отсутствует объект 'order'"
     assert order_data['order']['track'] == track_number, "Трек в ответе не совпадает"
     
     print("Тест пройден успешно!")
 
+# Татьяна Белова, 36 когорта - Финальный проект. Инженер по тестированию плюс
 # Запускаем тест
 if __name__ == "__main__":
     test_create_order_and_get_by_track()
