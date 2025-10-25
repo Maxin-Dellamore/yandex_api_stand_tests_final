@@ -1,9 +1,3 @@
-.pytest/
-venv/
-.idea/
-.pytest_cache/
-__pycache__/
-
 # игнорировать файл settings.json в директории .vscode
 .vscode/settings.json
 
